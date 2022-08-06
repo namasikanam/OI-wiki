@@ -12,6 +12,6 @@ set -e
 
 chmod +x $INSTALL_THEME && $INSTALL_THEME
 
-git rev-parse --short HEAD | xargs -I % sed -i "s/githash: ''/githash: '%'/g" mkdocs.yml
+git rev-parsea --short HEAD | xargs -I % sed -i "s/githash: ''/githash: '%'/g" mkdocs.yml
 #Will NOT Use Mathjax for Deploy
 sed -i "s#  - 'assets/vendor/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'##g" mkdocs.yml
